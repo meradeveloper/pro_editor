@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+/* Tailwind v4 fix: button UA styles are unlayered and beat @layer utilities.
+   Reset button color to inherit so text-* utilities work correctly. */
+button {
+  color: inherit;
+}
+
+/* Tiptap editor styles */
+.ProseMirror {
+  outline: none;
+  min-height: 100%;
+}
+
+/* .ProseMirror p.is-editor-empty:first-child::before {
+  color: #9ca3af;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+} */
+
+.ProseMirror h1 {
+  @apply text-4xl font-bold mb-4;
+}
+
+.ProseMirror h2 {
+  @apply text-3xl font-bold mb-3;
+}
+
+.ProseMirror h3 {
+  @apply text-2xl font-semibold mb-2;
+}
+
+.ProseMirror p {
+  @apply mb-2 leading-relaxed;
+}
+
+.ProseMirror ul {
+  @apply list-disc pl-6 mb-2;
+}
+
+.ProseMirror ol {
+  @apply list-decimal pl-6 mb-2;
+}
+
+.ProseMirror li {
+  @apply mb-1;
+}
+
+.ProseMirror blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4;
+}
+
+.ProseMirror pre {
+  @apply bg-gray-900 text-gray-100 rounded-lg p-4 my-4 overflow-x-auto;
+}
+
+.ProseMirror code {
+  @apply bg-gray-100 text-red-600 px-1 rounded text-sm font-mono;
+}
+
+.ProseMirror pre code {
+  @apply bg-transparent text-gray-100 px-0;
+}
+
+.ProseMirror hr {
+  @apply border-gray-300 my-6;
+}
+
+.ProseMirror img {
+  @apply max-w-full rounded-lg;
+}
+
+/* Preview styles */
+.preview-content h1 {
+  @apply text-4xl font-bold mb-4 text-gray-900;
+}
+
+.preview-content h2 {
+  @apply text-3xl font-bold mb-3 text-gray-900;
+}
+
+.preview-content h3 {
+  @apply text-2xl font-semibold mb-2 text-gray-900;
+}
+
+.preview-content p {
+  @apply mb-2 leading-relaxed text-gray-700;
+}
+
+.preview-content ul {
+  @apply list-disc pl-6 mb-2 text-gray-700;
+}
+
+.preview-content ol {
+  @apply list-decimal pl-6 mb-2 text-gray-700;
+}
+
+.preview-content blockquote {
+  @apply border-l-4 border-blue-400 pl-4 italic text-gray-600 my-4;
+}
+
+.preview-content pre {
+  @apply bg-gray-900 text-gray-100 rounded-lg p-4 my-4 overflow-x-auto;
+}
+
+.preview-content code {
+  @apply bg-gray-100 text-red-600 px-1 rounded text-sm font-mono;
+}
+
+.preview-content img {
+  @apply max-w-full rounded-lg my-4;
+}
+
+.preview-content hr {
+  @apply border-gray-200 my-8;
+}
